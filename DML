@@ -1,0 +1,4 @@
+#DELETE FROM it_service.aplicacionesit
+#WHERE idaplicacion = 4
+
+#GRANT SELECT, INSERT ON it_service.usuarios TO usuario1;
