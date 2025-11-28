@@ -1,0 +1,8 @@
+CREATE TABLE `it_service`.`usuarios` (
+  `idUsuarios` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NULL,
+  `area` VARCHAR(45) NULL,
+  `pais` VARCHAR(45) NULL,
+  `email` VARCHAR(100) NULL,
+  PRIMARY KEY (`idUsuarios`));
