@@ -1,4 +1,5 @@
 #DELETE FROM it_service.aplicacionesit
 #WHERE idaplicacion = 4
 
-#GRANT SELECT, INSERT ON it_service.usuarios TO usuario1;
+INSERT INTO it_service.aplicacionesit (aplicacion, modulo, version)
+VALUES ('SAP', 'MM', '2020');
