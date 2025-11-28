@@ -6,3 +6,11 @@ CREATE TABLE `it_service`.`usuarios` (
   `pais` VARCHAR(45) NULL,
   `email` VARCHAR(100) NULL,
   PRIMARY KEY (`idUsuarios`));
+
+CREATE TABLE `aplicacionesit` (
+  `idaplicacion` int NOT NULL AUTO_INCREMENT,
+  `aplicacion` varchar(45) DEFAULT NULL,
+  `modulo` varchar(45) DEFAULT NULL,
+  `version` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idaplicacion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
