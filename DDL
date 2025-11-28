@@ -14,3 +14,29 @@ CREATE TABLE `aplicacionesit` (
   `version` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idaplicacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `events_rq` (
+  `idevents` int NOT NULL AUTO_INCREMENT,
+  `descript` varchar(45) DEFAULT NULL,
+  `statusv` varchar(45) DEFAULT NULL,
+  `stagev` varchar(45) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `target_date` date DEFAULT NULL,
+  PRIMARY KEY (`idevents`),
+  CONSTRAINT `ticket` FOREIGN KEY (`idevents`) REFERENCES `requerimientosit` (`ticket`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `it_service`.`skill_appconsult` (
+  `idskill_consult` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idskill_consult`),
+  CONSTRAINT `consultor`
+    FOREIGN KEY (`idskill_consult`)
+    REFERENCES `it_service`.`consultores` (`idconsultor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `app`
+    FOREIGN KEY (`idskill_consult`)
+    REFERENCES `it_service`.`aplicacionesit` (`idaplicacion`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
